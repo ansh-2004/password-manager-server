@@ -26,7 +26,7 @@ router.get('/get', async (req, res) => {
         password: decrypt(cred.password) // decrypted
       }));
       res.json(decryptedCredentials);
-    res.json(credentials);
+   
   } catch (err) {
     res.status(500).json({ message: 'Error fetching credentials' });
   }
