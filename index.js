@@ -6,7 +6,9 @@ const credentialsRoutes = require('./routes/credentials');
 connectMongoDb()
 const cors = require('cors');
 app.use(cors({
-    origin: "https://password-manager-client.vercel.app/"
+    origin: "https://password-manager-client.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   }));
 app.use(express.json());
 
