@@ -5,7 +5,9 @@ const connectMongoDb = require('./config')
 const credentialsRoutes = require('./routes/credentials');
 connectMongoDb()
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+    origin: "*"
+  }));
 app.use(express.json());
 
 
